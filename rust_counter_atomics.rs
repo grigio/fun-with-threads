@@ -16,9 +16,9 @@ fn main() {
         counter.fetch_add(1, Relaxed);
       }
       tx.send(());
-      }).detach();
-    }
-    // Wait for threads to finish
-    for _ in range(0u, NUM_THREADS) { rx.recv(); }
-    println!("{}" , counter.load(Relaxed));
+    }).detach();
   }
+  // Wait for threads to finish
+  for _ in range(0u, NUM_THREADS) { rx.recv(); }
+  println!("{}" , counter.load(Relaxed));
+}
