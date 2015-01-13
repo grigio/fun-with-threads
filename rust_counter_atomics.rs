@@ -1,4 +1,4 @@
-// Ported to rust 0.13.0-nightly
+// Ported to rust 1.0.0-dev
 use std::sync::Arc;
 use std::sync::atomic::AtomicUint;
 use std::sync::atomic::Ordering::Relaxed;
